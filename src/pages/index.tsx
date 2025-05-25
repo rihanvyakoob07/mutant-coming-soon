@@ -26,7 +26,6 @@ export default function Index() {
       />
       
       <DNAPattern 
-        variant="organic-large"
         className="top-1/4 right-16 w-12 h-12 sm:w-16 sm:h-16 -rotate-45 z-10" 
         color="#5CE596" 
         opacity={0.3}
@@ -34,7 +33,6 @@ export default function Index() {
       />
       
       <DNAPattern 
-        variant="network-large"
         className="bottom-1/3 left-1/4 w-16 h-12 sm:w-20 sm:h-16 rotate-90 z-10" 
         color="#C5FF81" 
         opacity={0.4}
@@ -42,14 +40,12 @@ export default function Index() {
       />
       
       <DNAPattern 
-        variant="organic-small"
         className="bottom-20 right-1/3 w-8 h-8 sm:w-10 sm:h-10 -rotate-12 z-10" 
         color="#BDE75D" 
         opacity={0.5}
       />
       
       <DNAPattern 
-        variant="network-medium"
         className="top-1/2 left-16 w-12 h-10 sm:w-16 sm:h-14 rotate-45 z-10" 
         color="#7CD668" 
         opacity={0.3}
