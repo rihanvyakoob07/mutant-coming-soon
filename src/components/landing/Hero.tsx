@@ -1,7 +1,6 @@
 
 
 
-
 // Hero.tsx (Optimized glow positioning and intensity)
 import React from "react";
 import { SocialLinks } from "@/components/landing/SocialLinks";
@@ -42,7 +41,7 @@ export const Hero: React.FC = () => {
                   backgroundClip: "text",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
-                  fontSize: '32px'
+                  fontSize: '21px'
                 }}
               >
                 DIFFERENT IS COMING
@@ -54,7 +53,7 @@ export const Hero: React.FC = () => {
                   backgroundClip: "text",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
-                  fontSize: '32px'
+                  fontSize: '30px'
                 }}
               >
                 TO EDUCATION
