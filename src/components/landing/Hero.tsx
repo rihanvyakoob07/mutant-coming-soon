@@ -1,10 +1,6 @@
 
 
 
-
-
-
-
 // Hero.tsx (Optimized glow positioning and intensity)
 import React from "react";
 import { SocialLinks } from "@/components/landing/SocialLinks";
@@ -66,7 +62,7 @@ export const Hero: React.FC = () => {
             
             {/* Desktop: Original color treatment */}
             <div className="hidden sm:block">
-              <div className="mt-4 md:mt-8 lg:mt-12 text-white text-[36px]">
+              <div className="mt-4 md:mt-8 lg:mt-12 text-white text-[40px]">
                 SOMETHING DIFFERENT IS
               </div>
               <div
@@ -75,7 +71,7 @@ export const Hero: React.FC = () => {
                   backgroundClip: "text",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
-                  fontSize: "clamp(28px, 5vw, 32px)",
+                  fontSize: "clamp(42px, 5vw, 32px)",
                 }}
               >
                 COMING TO EDUCATION
@@ -88,11 +84,11 @@ export const Hero: React.FC = () => {
             style={{
               textAlign: "center",
               fontFamily: "Roboto Mono, monospace",
-              fontSize: "clamp(12px, 2.5vw, 14px)",
+              fontSize: "clamp(18px, 2.5vw, 14px)",
               fontStyle: "normal",
               fontWeight: 200,
               lineHeight: "1.6",
-              letterSpacing: "clamp(0.3px, 0.1vw, 0.5px)",
+              letterSpacing: "clamp(0.2px, 0.1vw, 0.5px)",
             }}
           >
             {/* Mobile: Accurate line breaks and colors */}
