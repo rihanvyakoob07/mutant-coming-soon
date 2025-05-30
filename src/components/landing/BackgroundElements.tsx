@@ -1,5 +1,7 @@
 
 // BackgroundElements.tsx
+
+// BackgroundElements.tsx
 import React from 'react';
 
 export const BackgroundElements: React.FC = () => {
@@ -9,7 +11,7 @@ export const BackgroundElements: React.FC = () => {
 
 
       {/* Background pattern */}
-      <div className="absolute left-1/2 top-[60%] w-[973px] h-[973px] opacity-60 transform -translate-x-1/2">
+      <div className="absolute left-1/2 top-[60%] w-[973px] h-[973px] opacity-20 transform -translate-x-1/2">
         <svg width="973" height="382" viewBox="0 0 973 382" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g opacity="0.6">
             <path d="M289.82 177.216C319.88 147.156 298.59 95.7576 256.079 95.7576C229.725 95.7576 208.362 117.121 208.362 143.475C208.362 185.986 259.76 207.276 289.82 177.216ZM716.876 95.7576C674.364 95.7576 653.075 147.156 683.135 177.216C713.195 207.276 764.593 185.986 764.593 143.475C764.593 117.121 743.229 95.7576 716.876 95.7576Z" fill="url(#paint0_radial_753_4089)" fillOpacity="0.2" />
@@ -30,8 +32,5 @@ export const BackgroundElements: React.FC = () => {
     </div>
   );
 };
-
-
-
 
 
