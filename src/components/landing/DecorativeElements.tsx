@@ -1,48 +1,112 @@
-import React from 'react';
-
 export const DecorativeElements: React.FC = () => {
   return (
-    <>
-      <div className="absolute left-[30px] top-[736px] w-[28px] h-[68px] transform rotate-[13.472deg] filter blur-[1.5px]">
-        <svg width="46" height="78" viewBox="0 0 46 78" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g filter="url(#filter0_f_716_329)" opacity="0.4">
-            <path d="M24.7491 26.0778L27.6714 27.1524C27.5019 26.8859 27.3311 26.6251 27.1537 26.3612L24.7491 26.0778Z" fill="#939393"/>
-            <path d="M29.8317 31.2152C29.6013 30.6578 29.3442 30.1119 29.0656 29.5756L22.0273 28.564L29.8317 31.2152Z" fill="#939393"/>
-            <path d="M30.9811 34.7978C30.8338 34.1474 30.6528 33.4973 30.438 32.8475L19.6473 31.1316L30.9811 34.7978Z" fill="#939393"/>
-            <path d="M31.4825 38.1184C31.432 37.4422 31.3514 36.7616 31.2385 36.0853L17.9721 33.8684L31.4825 38.1184Z" fill="#939393"/>
-            <path d="M31.4688 41.2711C31.5229 40.605 31.5429 39.9323 31.5306 39.2578L16.6486 36.6895L31.4688 41.2711Z" fill="#939393"/>
-            <path d="M24.9437 50.5145L19.0609 49.8213L23.489 51.4513C23.9851 51.1541 24.4727 50.843 24.9437 50.5145Z" fill="#939393"/>
-          </g>
-          <defs>
-            <filter id="filter0_f_716_329" x="0.895508" y="0.31665" width="44.5664" height="77.5681" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-              <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-              <feGaussianBlur stdDeviation="1.5" result="effect1_foregroundBlur_716_329"/>
-            </filter>
-          </defs>
+    <div className="absolute w-full h-full pointer-events-none z-[1] left-0 top-0 overflow-hidden">
+      {/* Subtle Grid Pattern Background */}
+      <div 
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '60px 60px',
+          backgroundPosition: '0 0, 0 0'
+        }}
+      />
+
+      {/* Radial Gradient Overlay for Depth */}
+      <div 
+        className="absolute inset-0 opacity-20 "
+        style={{
+          background: `
+            radial-gradient(circle at 20% 20%, rgba(132, 66, 252, 0.08) 0%, transparent 50%),
+            radial-gradient(circle at 80% 80%, rgba(124, 214, 104, 0.05) 0%, transparent 50%),
+            radial-gradient(circle at 50% 100%, rgba(168, 85, 247, 0.06) 0%, transparent 60%)
+          `
+        }}
+      />
+
+      {/* Geometric Pattern - Top Left */}
+      <div className="absolute top-[10%] left-[5%] w-32 h-32 opacity-[0.08] rotate-12  ">
+        <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path 
+            d="M64 8L120 64L64 120L8 64L64 8Z" 
+            stroke="rgba(132, 66, 252, 0.3)" 
+            strokeWidth="1" 
+            fill="none"
+          />
+          <path 
+            d="M64 24L104 64L64 104L24 64L64 24Z" 
+            stroke="rgba(168, 85, 247, 0.2)" 
+            strokeWidth="1" 
+            fill="none"
+          />
         </svg>
       </div>
-      <div className="absolute left-[1611px] top-[78px] w-[20px] h-[48px] transform rotate-[-8.611deg] filter blur-[0.5px]">
-        <svg width="27" height="52" viewBox="0 0 27 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g filter="url(#filter0_f_716_350)" opacity="0.3">
-            <path d="M11.0518 17.116L13.2301 17.0439C13.0501 16.9157 12.8706 16.7914 12.6861 16.667L11.0518 17.116Z" fill="url(#paint0_linear_716_350)"/>
-            <path d="M15.7008 19.1104C15.4046 18.8095 15.0942 18.523 14.7723 18.2484L9.94082 19.4445L15.7008 19.1104Z" fill="url(#paint1_linear_716_350)"/>
-            <path d="M17.3883 21.132C17.1216 20.7489 16.8331 20.3749 16.5228 20.0099L9.07199 21.7366L17.3883 21.132Z" fill="url(#paint2_linear_716_350)"/>
-            <path d="M18.5882 23.154C18.3775 22.7286 18.1461 22.3084 17.8949 21.8994L8.70638 23.9527L18.5882 23.154Z" fill="url(#paint3_linear_716_350)"/>
-            <linearGradient id="paint0_linear_716_350" x1="11.491" y1="16.8479" x2="11.5557" y2="17.2909" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#A8FF66"/>
-              <stop offset="1" stopColor="#99978C"/>
-            </linearGradient>
-          </g>
-          <defs>
-            <filter id="filter0_f_716_350" x="0" y="0" width="27" height="52" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-              <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-              <feGaussianBlur stdDeviation="0.5" result="effect1_foregroundBlur_716_350"/>
-            </filter>
-          </defs>
+
+      {/* Geometric Pattern - Top Right */}
+      <div className="absolute top-[15%] right-[8%] w-24 h-24 opacity-[0.06] -rotate-45 ">
+        <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle 
+            cx="48" 
+            cy="48" 
+            r="40" 
+            stroke="rgba(124, 214, 104, 0.3)" 
+            strokeWidth="1" 
+            fill="none"
+          />
+          <circle 
+            cx="48" 
+            cy="48" 
+            r="24" 
+            stroke="rgba(189, 231, 93, 0.2)" 
+            strokeWidth="1" 
+            fill="none"
+          />
+          <circle 
+            cx="48" 
+            cy="48" 
+            r="8" 
+            stroke="rgba(245, 255, 223, 0.15)" 
+            strokeWidth="1" 
+            fill="none"
+          />
         </svg>
       </div>
-    </>
+
+
+
+      {/* Hexagonal Pattern - Bottom Right */}
+      <div className="absolute bottom-[25%] right-[12%] w-20 h-20 opacity-[0.07] rotate-[30deg] ">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path 
+            d="M40 8L60 24V56L40 72L20 56V24L40 8Z" 
+            stroke="rgba(124, 214, 104, 0.4)" 
+            strokeWidth="1.5" 
+            fill="none"
+          />
+          <path 
+            d="M40 20L52 28V52L40 60L28 52V28L40 20Z" 
+            stroke="rgba(189, 231, 93, 0.3)" 
+            strokeWidth="1" 
+            fill="none"
+          />
+        </svg>
+      </div>
+
+      {/* Floating Particles */}
+      <div className="absolute top-[30%] left-[25%] w-1 h-1 bg-purple-400 opacity-20 rounded-full animate-pulse " />
+      <div className="absolute top-[45%] right-[30%] w-1.5 h-1.5 bg-green-400 opacity-15 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="absolute bottom-[40%] left-[70%] w-1 h-1 bg-purple-300 opacity-25 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
+      <div className="absolute top-[60%] left-[15%] w-0.5 h-0.5 bg-green-300 opacity-30 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }} />
+
+      {/* Subtle Noise Texture Overlay */}
+      <div 
+        className="absolute inset-0 opacity-[0.02] mix-blend-overlay"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+        }}
+      />
+    </div>
   );
 };
