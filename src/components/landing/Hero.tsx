@@ -172,7 +172,7 @@ export const Hero: React.FC = () => {
           {/* Dino Image - Perfectly centered */}
           <div className="relative z-20 " style={{ 
             marginBottom: "clamp(10px, 5vh, 50px)",
-            width: "clamp(400px, 50vw, 400px)"
+            width: "clamp(700px, 50vw, 400px)"
           }}>
             <img
               src="/dino.png"
