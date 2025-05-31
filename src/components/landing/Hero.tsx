@@ -1,7 +1,5 @@
 
-
-
-// Hero.tsx (Updated with 1024x600 fix)
+// Hero.tsx 
 import React from "react";
 import { SocialLinks } from "@/components/landing/SocialLinks";
 
@@ -35,12 +33,19 @@ export const Hero: React.FC = () => {
         rel="stylesheet"
       />
 
-      {/* CSS for 1024x600 Nest Hub dimension fix */}
+      {/* CSS for Google Nest Hub devices */}
       <style jsx>{`
         /* Specific fix for 1024x600 Nest Hub dimensions */
         @media screen and (width: 1024px) and (height: 600px) {
           .dino-container {
             margin-top: -50px !important;
+          }
+        }
+        
+        /* Specific fix for 1280x800 Nest Hub Max dimensions */
+        @media screen and (width: 1280px) and (height: 800px) {
+          .dino-container {
+            margin-top: -40px !important;
           }
         }
         
@@ -51,10 +56,24 @@ export const Hero: React.FC = () => {
           }
         }
         
-        /* Broader Nest Hub targeting */
-        @media screen and (min-width: 1000px) and (max-width: 1100px) and (min-height: 580px) and (max-height: 620px) {
+        /* Nest Hub Max range targeting */
+        @media screen and (min-width: 1270px) and (max-width: 1290px) and (min-height: 790px) and (max-height: 810px) {
+          .dino-container {
+            margin-top: -35px !important;
+          }
+        }
+        
+        /* Broader Nest Hub targeting for both devices */
+        @media screen and (min-width: 1000px) and (max-width: 1300px) and (min-height: 580px) and (max-height: 820px) {
           .dino-container {
             margin-bottom: clamp(40px, 6vh, 70px) !important;
+          }
+        }
+        
+        /* Landscape orientation targeting for Nest Hub devices */
+        @media screen and (orientation: landscape) and (min-width: 1000px) and (max-width: 1300px) and (max-height: 820px) {
+          .dino-container {
+            margin-top: clamp(-60px, -4vh, -30px) !important;
           }
         }
       `}</style>
@@ -190,7 +209,7 @@ export const Hero: React.FC = () => {
           </div>
         </div>
 
-        {/* Dino Container with 1024x600 fix - Added dino-container class */}
+        {/* Dino Container with Nest Hub fixes */}
         <div className="relative w-full flex-grow flex items-end justify-center dino-container">
           {/* Optimized Glow Effects */}
           <div className="absolute inset-x-0 bottom-0 flex justify-center pointer-events-none">
