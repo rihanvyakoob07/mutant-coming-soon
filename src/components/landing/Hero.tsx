@@ -1,5 +1,4 @@
-
-// Hero.tsx 
+// Hero.tsx (Updated with comprehensive 1024x600 Nest Hub fixes)
 import React from "react";
 import { SocialLinks } from "@/components/landing/SocialLinks";
 
@@ -33,47 +32,67 @@ export const Hero: React.FC = () => {
         rel="stylesheet"
       />
 
-      {/* CSS for Google Nest Hub devices */}
+      {/* CSS for Google Nest Hub devices with comprehensive scaling */}
       <style jsx>{`
-        /* Specific fix for 1024x600 Nest Hub dimensions */
+        /* Comprehensive fix for 1024x600 Nest Hub - Scale everything down */
         @media screen and (width: 1024px) and (height: 600px) {
+          /* Scale down main heading */
+          .nest-hub-heading {
+            font-size: 24px !important;
+            line-height: 1.0 !important;
+            margin-bottom: 15px !important;
+          }
+          
+          /* Scale down subtitle text */
+          .nest-hub-subtitle {
+            font-size: 11px !important;
+            line-height: 1.3 !important;
+            margin-bottom: 20px !important;
+          }
+          
+          /* Scale down social links container */
+          .nest-hub-social {
+            transform: scale(0.8) !important;
+            margin-top: -15px !important;
+            margin-bottom: 10px !important;
+          }
+          
+          /* Scale down text container */
+          .nest-hub-text-container {
+            padding-top: 30px !important;
+            margin-bottom: 15px !important;
+          }
+          
+          /* Add margin-bottom to dino for proper viewing */
           .dino-container {
-            margin-top: -50px !important;
+            margin-top: -25px !important;
+          }
+          
+          /* Scale down dino size slightly */
+          .nest-hub-dino {
+            width: 280px !important;
+            max-width: 280px !important;
           }
         }
         
         /* Specific fix for 1280x800 Nest Hub Max dimensions */
         @media screen and (width: 1280px) and (height: 800px) {
           .dino-container {
-            margin-top: -40px !important;
+            margin-bottom: 60px !important;
           }
         }
         
         /* Alternative approach for similar aspect ratios */
         @media screen and (min-width: 1020px) and (max-width: 1030px) and (max-height: 610px) {
           .dino-container {
-            margin-bottom: 50px !important;
+            margin-bottom: 70px !important;
           }
         }
         
         /* Nest Hub Max range targeting */
         @media screen and (min-width: 1270px) and (max-width: 1290px) and (min-height: 790px) and (max-height: 810px) {
           .dino-container {
-            margin-top: -35px !important;
-          }
-        }
-        
-        /* Broader Nest Hub targeting for both devices */
-        @media screen and (min-width: 1000px) and (max-width: 1300px) and (min-height: 580px) and (max-height: 820px) {
-          .dino-container {
-            margin-bottom: clamp(40px, 6vh, 70px) !important;
-          }
-        }
-        
-        /* Landscape orientation targeting for Nest Hub devices */
-        @media screen and (orientation: landscape) and (min-width: 1000px) and (max-width: 1300px) and (max-height: 820px) {
-          .dino-container {
-            margin-top: clamp(-60px, -4vh, -30px) !important;
+            margin-bottom: 50px !important;
           }
         }
       `}</style>
@@ -84,10 +103,12 @@ export const Hero: React.FC = () => {
       </a>
 
       <main id="main-content" className="flex flex-col items-center w-full relative z-20 px-4 min-h-screen">
-        {/* Text + Social Block with improved spacing */}
-        <div className="flex flex-col items-center max-w-[900px] w-full relative z-20 mb-3 sm:mb-6 md:mb-8 lg:mb-10 text-center pt-[6vh] sm:pt-[4vh] md:pt-[6vh]">
+        {/* Text + Social Block with Nest Hub scaling */}
+        <div className="flex flex-col items-center max-w-[900px] w-full relative z-20 mb-3 sm:mb-6 md:mb-8 lg:mb-10 text-center pt-[6vh] sm:pt-[4vh] md:pt-[6vh] nest-hub-text-container">
+          
+          {/* Main Heading with Nest Hub scaling */}
           <h1
-            className="w-full mb-4 sm:mb-6 md:mb-8"
+            className="w-full mb-4 sm:mb-6 md:mb-8 nest-hub-heading"
             style={{
               textAlign: "center",
               ...HEADING_STYLES,
@@ -167,8 +188,9 @@ export const Hero: React.FC = () => {
             </div>
           </h1>
 
+          {/* Subtitle Text with Nest Hub scaling */}
           <div
-            className="mb-5 sm:mb-7 md:mb-9 max-w-[600px] px-4"
+            className="mb-5 sm:mb-7 md:mb-9 max-w-[600px] px-4 nest-hub-subtitle"
             style={{
               textAlign: "center",
               fontFamily: "Roboto Mono, monospace",
@@ -203,8 +225,8 @@ export const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Social Links with reduced spacing */}
-          <div className="mt-2 sm:mt-[-10px] md:mt-[-15px] lg:mt-[-20px]">
+          {/* Social Links with Nest Hub scaling */}
+          <div className="mt-2 sm:mt-[-10px] md:mt-[-15px] lg:mt-[-20px] nest-hub-social">
             <SocialLinks />
           </div>
         </div>
@@ -259,7 +281,7 @@ export const Hero: React.FC = () => {
             />
           </div>
           
-          {/* Optimized Dino Image */}
+          {/* Optimized Dino Image with Nest Hub scaling */}
           <div 
             className="relative z-20 w-full flex justify-center"
             style={{ 
@@ -269,7 +291,7 @@ export const Hero: React.FC = () => {
             }}
           >
             <div
-              className="relative"
+              className="relative nest-hub-dino"
               style={{
                 width: "clamp(300px, 80vw, 300px)",
                 maxWidth: "100%",
