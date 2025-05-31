@@ -6,7 +6,7 @@ export const HexPatternBackground: React.FC = () => {
 <div className="fixed bottom-0  mb-20 ml-2 
                 min-w-[150px] min-h-[180px] 
                 max-w-[600px] max-h-[720px]
-                opacity-25 hover:opacity-35
+                opacity-20 hover:opacity-35
                 scale-40 sm:scale-50 md:scale-75 lg:scale-2
                 origin-bottom-left transform">
 
