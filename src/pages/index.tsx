@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Script from 'next/script';
 import { Header } from '@/components/landing/Header';
 import { Hero } from '@/components/landing/Hero';
 import { BackgroundElements } from '@/components/landing/BackgroundElements';
@@ -12,19 +13,6 @@ export default function Index() {
   return (
     <>
       <Head>
-        {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DZLGS4F0MK"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-DZLGS4F0MK');
-            `,
-          }}
-        />
-
         {/* Essential Meta Tags */}
         <title>The Mutant School | Revolutionary Story-Driven Learning Platform</title>
         <meta name="description" content="Join the creative rebellion against boring online classes. Story-driven, mission-based learning platform built for the next generation of learners. Coming Soon." />
@@ -38,7 +26,7 @@ export default function Index() {
         <meta property="og:url" content="https://themutantschool.com/" />
         <meta property="og:title" content="The Mutant School | Revolutionary Story-Driven Learning Platform" />
         <meta property="og:description" content="Join the creative rebellion against boring online classes. Story-driven, mission-based learning platform built for the next generation of learners." />
-        <meta property="og:image" content="https://themutantschool.com/og-image.jpg" />
+        <meta property="og:image" content="https://themutantschool.com/The%20Mutant%20School.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="The Mutant School" />
@@ -47,36 +35,58 @@ export default function Index() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="The Mutant School | Revolutionary Story-Driven Learning Platform" />
         <meta name="twitter:description" content="Join the creative rebellion against boring online classes. Story-driven, mission-based learning platform built for the next generation of learners." />
-        <meta name="twitter:image" content="https://themutantschool.com/og-image.jpg" />
+        <meta name="twitter:image" content="https://themutantschool.com/The%20Mutant%20School.png" />
         
-
+        {/* Favicon & App Icons - Based on your public folder files */}
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
         
         {/* Performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
-        {/* Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "EducationalOrganization",
-              "name": "The Mutant School",
-              "description": "A revolutionary story-driven, mission-based learning platform built for the next generation of learners.",
-              "url": "https://themutantschool.com",
-              "logo": "https://themutantschool.com/logo.png",
-              "image": "https://themutantschool.com/og-image.jpg",
-              "sameAs": [
-                "https://twitter.com/themutantschool",
-                "https://linkedin.com/company/themutantschool"
-              ],
-              "foundingDate": "2025",
-              "slogan": "Something different is coming to education"
-            })
-          }}
-        />
       </Head>
+
+      {/* Google Analytics - Using next/script */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-DZLGS4F0MK"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-DZLGS4F0MK');
+        `}
+      </Script>
+
+      {/* Structured Data - Using next/script */}
+      <Script
+        id="structured-data"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            "name": "The Mutant School",
+            "description": "A revolutionary story-driven, mission-based learning platform built for the next generation of learners.",
+            "url": "https://themutantschool.com",
+            "logo": "https://themutantschool.com/The%20Mutant%20School.png",
+            "image": "https://themutantschool.com/The%20Mutant%20School.png",
+            "sameAs": [
+              "https://www.instagram.com/themutantschool/",
+              "https://www.youtube.com/@TheMutantSchool",
+              "https://www.linkedin.com/company/themutantschool/"
+            ],
+            "foundingDate": "2025",
+            "slogan": "Something different is coming to education"
+          })
+        }}
+      />
 
       <div className="w-screen h-screen relative overflow-hidden flex flex-col bg-black">
         {/* Background Layer */}
